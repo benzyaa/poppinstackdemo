@@ -1,0 +1,63 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.poppinstackdemo</groupId>
+  <artifactId>rocksdbjnidemo</artifactId>
+  <version>1.0.0</version>
+  <packaging>jar</packaging>
+
+  <name>rocksdbjnidemo</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <source-java-version>1.8</source-java-version>
+    <target-java-version>1.8</target-java-version>
+  </properties>
+
+  <dependencies>
+    <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+    <!-- For generate sample data in JSON format -->
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>2.12.0</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.rocksdb/rocksdbjni -->
+    <dependency>
+      <groupId>org.rocksdb</groupId>
+      <artifactId>rocksdbjni</artifactId>
+      <version>6.13.3</version>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version>
+        <configuration>
+          <source>${source-java-version}</source>
+          <target>${target-java-version}</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>3.0.0</version>
+        <configuration>
+          <executable>java</executable>
+          <mainClass>com.poppinstackdemo.rocksdbjnidemo.App</mainClass>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
