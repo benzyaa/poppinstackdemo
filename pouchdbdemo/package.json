@@ -1,0 +1,27 @@
+{
+  "name": "pouchdbdemo",
+  "version": "1.0.0",
+  "description": "The demo project for pouchdb implementation.",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "@types/lodash": "^4.14.165",
+    "http-server": "^0.12.3",
+    "lodash": "^4.17.20",
+    "pouchdb": "^7.2.2",
+    "pouchdb-find": "^7.2.2"
+  },
+  "devDependencies": {
+    "@types/pouchdb": "^6.4.0",
+    "awesome-typescript-loader": "^5.2.1",
+    "tslint": "^6.1.3",
+    "tslint-loader": "^3.5.4",
+    "typescript": "^4.1.2",
+    "webpack": "^5.9.0",
+    "webpack-env": "^0.8.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
