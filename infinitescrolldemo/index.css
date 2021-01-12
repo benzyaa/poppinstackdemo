@@ -1,0 +1,5 @@
+#infinite-scroll-outer-component {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color:#c0c0c0;
+}
